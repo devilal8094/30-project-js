@@ -1,0 +1,37 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body{
+    margin: auto;
+    padding: 22px 0;
+}
+.main-section{
+    display: flex;
+    margin: auto;
+    width: 1040px;
+}
+.twobox {
+    display: flex;
+    align-items: start;
+    gap: 50px;
+    justify-content: center;
+    
+}
+.left-side{
+    position: sticky;
+    top: 40px;
+}   
+.left-side, .right-side {
+    width: 50%;
+}
+.heading {
+    padding: 16px;
+    background: #ececec;
+}
+.scroll-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
