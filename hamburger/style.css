@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1170px;
+    margin: auto;
+    padding: 0 15px;
+}
+/* header */
+.header{
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.2);
+}
+.header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .logo img{
+    vertical-align: middle;
+}
+.header .menu .head{
+    display: none;
+}
+.header .menu ul{
+    list-style: none;
+}
+.header .menu > ul > li{
+    display: inline-block;
+}
+.header .menu > ul > li:not(:last-child){
+    margin-right: 40px;
+}
+.header .menu .dropdown{
+    position: relative;
+}
+.header .menu a{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 16px;
+    color: hsl(0, 0%, 100%);
+    line-height: 1.5;
+    display: block;
+}
+.header .menu > ul > li > a{
+    padding: 24px 0;
+}
+.header .menu > ul > .dropdown > a{
+    padding-right: 15px;
+}
+.header .menu i{
+    font-size: 10px;
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    color: hsl(0, 0%, 100%);
+    /* top: calc(50% -5px); */
+}
+.header .menu > ul > li > i {
+    right: 0px;
+    top: 32px;
+}
+.header .menu .sub-menu{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 230px;
+    padding: 15px 0;
+    z-index: 1;
+    background-color: hsl(229, 54%, 51%);
+    box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.5);
+    transform-origin: top;
+    transform: scale(0);
+    visibility: hidden;
+    opacity: 0;
+}
+.header .menu .sub-menu-right{
+    left: 100%;
+    top: 0;
+}
+.header .menu .sub-menu-right.sub-menu-set {
+    left: 0%;
+    top: 72px;
+}
+.header .menu .sub-menu-left{
+    top: 0;
+    left: auto;
+    right: 100%;
+}
+.header .menu li:hover  > .sub-menu{
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    transition: all 0.5s ease;
+}
+.header .menu .sub-menu a{
+    padding: 6px 24px;
+}
+.header .menu .sub-menu .dropdown > a{
+    padding-right: 34px;
+}
+.header .menu .sub-menu span{
+    background-image: linear-gradient(hsl(0, 0%, 100%), hsl(0, 0%, 100%));
+    background-size: 0 1px;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s ease;
+}
+.header .menu .sub-menu li:hover > a > span{
+    background-size: 100% 1px;
+}
+.header .menu .sub-menu > li > i {
+    position: absolute;
+    right: 24px;
+    top: 16px;
+    transform: rotate(-90deg);
+}
+.header-right{
+    display: flex;
+}
+.header-right > * {
+    margin-left: 25px;
+}
+.header-right .icon-btn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: hsl(0, 0%, 100%);
+    font-size: 16px;
+}
+.header-right .open-menu-btn{
+ display: none;
+}
+/* hero */
+.hero{
+    min-height: 100vh;
+    background-image: url('./assets/images/home-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
